@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<section>
+
+    <div class="container">
+        <div class="loader">
+            <img src="loader.gif">
+        </div>
+        <div class="jumbotron">
+            <h3>Jumbotron</h3>
+            <ul id="list">
+                <li class="listt">
+                    <p> A jumbotron indicates a big box for calling extra attention to some special content or information.</p>
+
+                </li>
+                <li class="listt">
+                    A jumbotron is displayed as a grey box with rounded corners. It also enlarges the font sizes of the text inside it.
+                </li>
+                <li class="listt">
+                    Inside a jumbotron you can put nearly any valid HTML, including other Bootstrap elements/classes.
+                </li>
+            </ul>
+
+            <div class="btn">
+                <button onclick="onHide();" class="btnOne">Hide</button>
+                <button onclick="onShow();" class="btnTwo">Show</button>
+                <button onclick="onBtnClick();" class="btnThreee">font&color</button>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<script src="js/jquery.min.js"></script>
+<script src="js/customjs.js"></script>
+<script>
+    $(window).on("load",function (){
+
+        $('.loader').css('display','block');
+        $('.jumbotron').css('visibility','hidden');
+
+        setTimeout(function (){
+            $('.loader').css('display','none');
+            $('.jumbotron').css('visibility','visible');
+        },1500)
+
+    });
+</script>
+</body>
+</html>
